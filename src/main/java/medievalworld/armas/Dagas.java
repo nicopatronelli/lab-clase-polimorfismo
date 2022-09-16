@@ -12,7 +12,7 @@ public class Dagas implements Arma {
 		if (cantidadDagas > 0) {
 			rival.recibirDanio(5);
 			cantidadDagas--;
-			if (cantidadDagas == 0) atacante.arma(null);
+			if (cantidadDagas == 0) atacante.desarmar();
 		}
 	}
 }

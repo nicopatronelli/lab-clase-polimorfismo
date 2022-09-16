@@ -52,4 +52,19 @@ class GuerreroTest {
 		assertEquals(125, atacante.hp());
 		assertEquals(20, rival.hp());
 	}
+
+	@Test
+	@DisplayName("Cuando un guerrero con dos dagas ataca dos veces a otro le quita 10 puntos de hp y queda desarmado")
+	void un_guerrero_con_dos_dagas_ataca_dos_veces_a_otro_con_lanza() {
+		Guerrero atacante = new Guerrero(100, "Lannister", new Dagas(2));
+		Guerrero rival = new Guerrero(100, "Stark", new Lanza());
+
+		atacante.atacarA(rival);
+		atacante.atacarA(rival);
+
+		assertEquals(90, rival.hp());
+		assertTrue(atacante.arma() instanceof Punios);
+	}
+
+	// Otros tests
 }
