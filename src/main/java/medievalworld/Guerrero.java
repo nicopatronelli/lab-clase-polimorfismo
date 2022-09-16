@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 import medievalworld.armas.Arma;
+import medievalworld.armas.Escudo;
 import medievalworld.armas.Punios;
 
 @AllArgsConstructor
@@ -25,5 +26,9 @@ public class Guerrero {
 
 	public void desarmar() {
 		this.arma = new Punios();
+	}
+
+	public boolean tieneEscudo() {
+		return this.arma instanceof Escudo;
 	}
 }

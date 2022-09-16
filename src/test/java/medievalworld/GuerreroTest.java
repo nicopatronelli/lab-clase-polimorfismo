@@ -2,8 +2,6 @@ package medievalworld;
 
 import java.util.stream.IntStream;
 
-import javax.swing.plaf.PanelUI;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
